@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Музей Неможливих Залів</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <canvas id="museum" aria-label="Інтерактивний музей від першої особи"></canvas>
+
+      <section class="hud" aria-label="Панель музею">
+        <div>
+          <p class="kicker">Музей Неможливих Залів</p>
+          <h1 id="roomName">Атріум</h1>
+        </div>
+        <div class="statline">
+          <span id="visitorCount">0 NPC</span>
+          <span id="nearbyName">Вхід активний</span>
+        </div>
+      </section>
+
+      <aside class="panel" aria-live="polite">
+        <div class="panel-head">
+          <span id="artifactMark"></span>
+          <p id="artifactType">Експонат поруч</p>
+        </div>
+        <h2 id="artifactTitle">Підійди до експоната</h2>
+        <p id="artifactText">Рухайся клавішами WASD або стрілками. Мишкою чи пальцем повертай погляд.</p>
+      </aside>
+
+      <div class="controls">
+        <button id="autoTour" type="button">Автотур</button>
+        <button id="lights" type="button">Нічне світло</button>
+      </div>
+
+      <div class="touch" aria-hidden="true">
+        <div class="stick" id="stick"><span></span></div>
+      </div>
+
+      <div class="hint">WASD / стрілки — рух · миша / свайп — погляд · підходь до експонатів</div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
